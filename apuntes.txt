@@ -1,0 +1,11 @@
+git status -- para ver el estado
+
+git rm [nombre del arcivo]
+(usa --cached para conservar el archivo, 
+o -f para forzar su eliminación)
+
+git rm --cached historia.txt
+
+git -f [nombre del archivo]
+Elimina en archivo 
+
