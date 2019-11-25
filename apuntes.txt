@@ -9,3 +9,21 @@ git rm --cached historia.txt
 git -f [nombre del archivo]
 Elimina en archivo 
 
+commit
+git commit -m "descripción del commit"
+
+Configurando git
+
+git config  >>  con este comando puedo ver las configuraciones de git
+
+git config --list >> configuraciones de la cuenta
+
+git config --list --show-origin >> donde estan las configuraciones guardadas
+
+git config --global user.name "nombre de la cuenta"
+
+git config --global user.email "soporte@allnexus.com.co"
+
+cat historia.txt >> con esto puedo ver el contenido del archivo pero no modificarlo
+
+
