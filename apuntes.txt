@@ -39,6 +39,16 @@ Volver en el tiempo en nuestro repositorio utilizando branches y checkout
 con git diff 
 puedo ver lo que tengo en el disco duro y lo que esta en stagin
 
+para moverse entre el tiempo
+git checkout [numero del commit] [nombre del archivo]
+
+git checkout 
+
+git checkout master 97a6baba15babe415bab72e920fc73e77fbab929 historia.txt
+
+
+
+
 
 
 
