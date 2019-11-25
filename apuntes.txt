@@ -26,4 +26,12 @@ git config --global user.email "soporte@allnexus.com.co"
 
 cat historia.txt >> con esto puedo ver el contenido del archivo pero no modificarlo
 
+git add . >> añado todos los arcivos . es mi carpeta raiz
+
+git log >> hitorial del commits
+
+git show [nombre del archivo] >> para ver los cambios que hay sobre el archivo
+
+
+
 
