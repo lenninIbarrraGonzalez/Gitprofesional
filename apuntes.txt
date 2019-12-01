@@ -120,4 +120,98 @@ git merge cualquier-otra-rama
 
 Git nunca borra nada a menos que nosotros se lo indiquemos. 
 Cuando usamos los comandos git merge o git checkout estamos cambiando de rama o creando un nuevo commit, 
+
 no borrando ramas ni commits (recuerda que puedes borrar commits con git reset y ramas con git branch -d).
+
+1. creamos un nuevo repositorio en GITHUB
+2. git remote add origin <url_repositorio>
+3. git pull <remoto> <rama> <<<<>>>> git pull origin master  >>> para bajar cambios de GITHUB
+4. si no funciona  los forzamos con: git pull origin master --allow-unrelated-histories
+5. empujamos los cambios al GITHUB git push origin master
+
+Respuesta a:
+Cómo funcionan las llaves públicas y privadas
+Llaves públicas y privadas
+o Cifrado asimétrico de un sólo camino
+
+Sirve para mandar mensajes privados entre varios nodos con la lógica de que firmas tu mensaje
+con una llave pública vinculada con una llave privada que puede leer el mensaje.
+
+El flujo es:
+
+Creas una llave pública y una llave privada (ambas están vinculadas)
+Cifras el mensaje con la llave pública (puede ser llave de otra persona)
+Envías el mensaje
+El receptor, al tener la llave privada puede descifrar el mensaje.
+Este algoritmo es completamente seguro, así es cómo se mandan las comunicaciones en bancos,
+la comunicación entre servidores o las firmas electrónicas.
+
+
+SSH o Secure Shell: Es un protocolo de red que permite acceso remoto seguro a través de una conexión encriptada. Este método de autenticación requiere un passphrase (contraseña) o tambien puede funcionar sin passphrase sobre la clave.
+.
+En el directorio Home ~
+
+$ git config -l: Muestra la configuración dentro de Git(user y email), Este comando funciona por que Git esta instalado en todo el equipo local.
+.
+$ git config --global user.email “nombre_email_cambiado” : Se puede utilizar este mismo comando para cambiar el email.
+.
+Creamos la llave SSH
+
+
+>>>>>>>>>>>>>>>   $ ssh-keygen -t rsa -b4096 -C "tu_email@gmail.com"
+
+-t = Especifica cual es el algoritmo que vamos a usar para crear esa llave.
+rsa = Algoritmo a usar, hasta el momento el mas popular.
+-b = Especifica que tan compleja es la llave.
+4096 = Complejidad de la llave desde una perspectiva matemática.
+-C = Indica a que correo electrónico va estar conectado esta llave
+"tu_email@gmail.com" = Correo electrónico.
+.
+Dato: Guardar la llave en la dirección predeterminada.
+Dato2: Passphrase: Password con espacios o Contraseña adicional de texto que le vas a poner a tu llave pública y privada.
+.
+1er Paso:
+Una ves que tengamos la llave, tenemos que agregarlo al entorno, y el entorno es básicamente que el sistema operativo donde tu trabajas sepa que la llave existe. Para ello ejecutamos lo sgte:
+.
+revisar el servidor de llaves / Evalúa que un comando se dispare.
+
+>>>>>>>>>>>>>>>>>>>>>>>>> $ eval $(ssh-agent -s)
+Dato: Agent pid 4724
+
+Agent = Significa que el servidor de SHH esta corriendo.
+pid = Process id o identificador del proceso.
+4724 = Número que al sistema operativo le dice que el proceso esta corriendo.
+.
+2do Paso:
+
+Agregamos la llave privada a nuestro sistema o al servidor por que no basta con que la llave solo exista, sino debemos decirle que existe. Para ello ejecutamos el siguiente comando:
+
+$ ssh-add ~/.ssh/id_rsa
+~ = Home
+.ssh = carpeta ssh
+id_rsa = llave privada la que nunca debemos de mostrar.
+
+Para copiar la llave publica y pegarla en el SSH Keys de GITHUB utilizamos
+
+cat ~/.ssh/id_rsa.pub
+
+y despues copiamos el resultado y lo pegamos en GITHUB.
+
+VERIFICAR LA CONEXION CON EL EQUIPO QUE SEA SSH
+1. git remote -v
+
+origin	https://github.com/lenninIbarrraGonzalez/Gitprofesional.git (fetch)
+origin	https://github.com/lenninIbarrraGonzalez/Gitprofesional.git (push)
+
+2. copiar la ruta con ssh desde GITHUB
+
+git remote -set-url origin git@github.com:lenninIbarrraGonzalez/Gitprofesional.git
+
+3. verificamos el cambio
+
+git remote -v
+origin	git@github.com:lenninIbarrraGonzalez/Gitprofesional.git (fetch)
+origin	git@github.com:lenninIbarrraGonzalez/Gitprofesional.git (push)
+
+
+
