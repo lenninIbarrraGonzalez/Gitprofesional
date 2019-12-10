@@ -1,8 +1,9 @@
 body{
+    background: #1e1f24;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     /* background: lightblue; */
-    color: red;
+    color: black;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@ body{
     text-align: left;
     border: 1px solid #DDD;
     margin: 0 auto;
+    background: white;
 }
 
 .container h1{
@@ -29,8 +31,16 @@ body{
     padding: 0.5em;
 }
 
+.cabecera #logo{
+    width: 120px;
+    vertical-align: middle;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+
 .cabecera #tagline{
-    color: red;
+    color: black;
     font-weight: normal;
     font-size: 0.8em;
 }
