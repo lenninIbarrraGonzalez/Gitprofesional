@@ -213,5 +213,25 @@ git remote -v
 origin	git@github.com:lenninIbarrraGonzalez/Gitprofesional.git (fetch)
 origin	git@github.com:lenninIbarrraGonzalez/Gitprofesional.git (push)
 
+comandos para manejar ramas
+
+git branch [nombre de la rama]  <<< para crear una rama
+
+git checkout [nombre de la rama] para moverse entre las ramas
+
+git branch para ver las ramas 
+
+git show-branch  <<<<< permite ver las ramas 
+git show-branch --all
+
+gitk >> abre una version grafica 
+
+
+Por defecto, cualquier persona puede clonar o descargar tu proyecto desde GitHub, pero no pueden crear commits, ni ramas, ni nada.
+
+Existen varias formas de solucionar esto para poder aceptar contribuciones. Una de ellas es añadir a cada persona de nuestro equipo como colaborador de nuestro repositorio.
+
+Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Repositorio > Settings > Collaborators) y añadir el email o username de los nuevos colaboradores.
+
 
 
