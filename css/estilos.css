@@ -34,3 +34,14 @@ body{
     font-weight: normal;
     font-size: 0.8em;
 }
+
+.footer{
+    background: cadetblue;
+    text-align: center;
+    color: black;
+    margin: 0;
+    width: 70%;
+    margin: 0 auto;
+    border: 17px solid cadetblue;
+}
+
