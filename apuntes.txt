@@ -233,5 +233,16 @@ Existen varias formas de solucionar esto para poder aceptar contribuciones. Una 
 
 Solo debemos entrar a la configuración de colaboradores de nuestro proyecto (Repositorio > Settings > Collaborators) y añadir el email o username de los nuevos colaboradores.
 
+Git Rebase: Reorganizando el trabajo realizado
+El comando rebase es una mala práctica, nunca se debe usar.
+Con rebase puedes recoger todos los cambios confirmados en una rama y ponerlos sobre otra.
+
+# Cambiamos a la rama que queremos traer los cambios
+git checkout experiment
+# Aplicamos rebase para traer los cambios de la rama que queremos 
+git rebase master
+
+
+
 
 
