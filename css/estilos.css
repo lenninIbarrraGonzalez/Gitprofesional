@@ -55,3 +55,10 @@ body{
     border: 17px solid cadetblue;
 }
 
+.imagen_central{
+    display: flex;
+    /* background: chartreuse; */
+    justify-content: center;
+    justify-items: center;
+}
+
