@@ -343,3 +343,8 @@ Consideraciones:
 El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
 Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
 Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
+
+Cuando queremos borrar archivos que no son de nuestro proyecto
+(git clean --dry-run) nos dira que archivos seran borrados y despues (git clean -f)
+borrara los archivos excepto las carpetas y los que esten .gitignore y para borrar carpetas
+(git clean -df)
