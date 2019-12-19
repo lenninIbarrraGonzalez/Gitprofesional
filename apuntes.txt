@@ -361,3 +361,6 @@ cherry-pick es una mala práctica porque significa que estamos reconstruyendo la
 
 4. en la nueva rama hago un git commit
 5. en la nueva rama hago mas commits
+6. me paso a master o a la rama que deseo hacer el cherry-pick
+7. git cherry-pick [### numero del commit que voy a traer]
+8. listo no es necesario hacer git commit ya esta hecho
