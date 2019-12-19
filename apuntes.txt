@@ -364,3 +364,7 @@ cherry-pick es una mala práctica porque significa que estamos reconstruyendo la
 6. me paso a master o a la rama que deseo hacer el cherry-pick
 7. git cherry-pick [### numero del commit que voy a traer]
 8. listo no es necesario hacer git commit ya esta hecho
+9. ahora que  ya finalice el trabajo en la otra rama hago un git merge, pero esto me genera un 
+conflicto ya que habiamos compiado un commit de la otra rama y este codigo esta en los dos archivos
+debo solucionar estos inconvenientes
+10. una vez solucionado esto hago un git commit y luego git pull y git push
