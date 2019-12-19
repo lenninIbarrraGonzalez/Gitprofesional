@@ -46,13 +46,13 @@ body{
 }
 
 .footer{
-    background: cadetblue;
+    background: #33A;
     text-align: center;
     color: black;
     margin: 0;
     width: 70%;
     margin: 0 auto;
-    border: 17px solid cadetblue;
+    border: 17px solid #33A;
 }
 
 .imagen_central{

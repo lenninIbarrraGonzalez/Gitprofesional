@@ -368,3 +368,23 @@ cherry-pick es una mala práctica porque significa que estamos reconstruyendo la
 conflicto ya que habiamos compiado un commit de la otra rama y este codigo esta en los dos archivos
 debo solucionar estos inconvenientes
 10. una vez solucionado esto hago un git commit y luego git pull y git push
+
+Reconstruír commits en Git con amend
+A veces hacemos un commit, pero resulta que no queríamos mandarlo porque faltaba algo más. Utilizamos git commit --amend, amend en inglés es remendar y lo que hará es que los cambios 
+que hicimos nos lo agregará al commit anterior.
+
+git commit --amend
+
+Remendar un commit
+Puede modificar el commit más reciente (enmendar) en la misma rama ejecutando:
+
+git add -A # Para hacer uso de ammend los archivos deben de estar en staging
+git commit --amend # Remendar último commit
+Este comando sirve para agregar archivos nuevos o actualizar el commit anterior y no generar commits innecesarios.
+
+También es una forma sencilla de editar o agregar comentarios al commit anterior porque abrirá la consola para editar
+ el commit anterior.
+
+Nota: Es una mala práctica hacer ammend de un commit que ya ha sido pusheado o pulleado del repositorio remoto, al
+ momento de hacer ammend con algún commit que esté en remoto va a generar un conflicto que se va a arreglar haciendo
+  un commit adicional y se perderá el beneficio del ammend.
