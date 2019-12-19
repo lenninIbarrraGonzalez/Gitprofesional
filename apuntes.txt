@@ -348,3 +348,16 @@ Cuando queremos borrar archivos que no son de nuestro proyecto
 (git clean --dry-run) nos dira que archivos seran borrados y despues (git clean -f)
 borrara los archivos excepto las carpetas y los que esten .gitignore y para borrar carpetas
 (git clean -df)
+
+Git cherry-pick: Traer commits viejos al head de un branch
+Existe un mundo alternativo en el cual vamos avanzando en una rama pero necesitamos en master uno de esos avances de la rama, para eso utilizamos el comando git cherry-pick IDCommit.
+
+cherry-pick es una mala práctica porque significa que estamos reconstruyendo la historia, usa cherry-pick con sabiduría. Si no sabes lo que estás haciendo ten mucho cuidado.
+
+1. realizo los cambios en el archivo
+2. hago un git stash para guardar
+3. creo una nueva rama con el stash que tengo
+    git stash branch [nombre de la nueva rama]
+
+4. en la nueva rama hago un git commit
+5. en la nueva rama hago mas commits
